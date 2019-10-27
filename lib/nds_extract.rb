@@ -96,8 +96,8 @@ def movies_with_directors_set(source)
   # to have a :director_name key added to it.
   updated_movies = []
   
-  source.each do |name, movies|
-    updated_movies << movies
+  source.each do |name|
+    updated_movies << name[:movies]
   end
   return updated_movies
 end
