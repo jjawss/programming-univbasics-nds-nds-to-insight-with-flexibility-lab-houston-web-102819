@@ -32,6 +32,8 @@ end
 
 # Your code after this point
 
+# Your code after this point
+
 def movies_with_director_key(name, movies_collection)
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
   # of movies and a directors name to the movie_with_director_name method
@@ -40,8 +42,7 @@ def movies_with_director_key(name, movies_collection)
   #
   # INPUT:
   # * name: A director's name
-  # * movies_collection: An Array of Hashes where each Hash represents a movie  
-        #I think like this??[{}, {}, {}]
+  # * movies_collection: An Array of Hashes where each Hash represents a movie
   #
   # RETURN:
   #
@@ -49,25 +50,9 @@ def movies_with_director_key(name, movies_collection)
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
   
-  #ITERATE OVER THE ARRAY OF HASHES GIVEN, TAKE EACH ELEMENT FROM THE ARRAY AND PLUG THEM INTO movie_with_director_name() RETURN THE OUTPUT OF THIS METHOD INTO A NEW ARRAY
-  
-
-  updated_movies = []
-  movies_collection.each do |name, movie|
-    updated_movies << movie_with_director_name(name, movie)
-  end
-  updated_movies.each do |name, movie|
-    directors_name[name] = movie
-  end
-  return updated_movies
-
-  #result should look like:
-  #[{directors_name: movie}, {directors_name: movie}]
+  #movie_with_director_name(name, movies_collection)[:title] = [:director_name]
+  #puts movie_with_director_name(name, movies_collection)
 end
-
-
-
-
 
 def gross_per_studio(collection)
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
@@ -94,12 +79,6 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
-  updated_movies = []
-  
-  source.each do |name, movies|
-    updated_movies << movies
-  end
-  return updated_movies
 end
 
 # ----------------    End of Your Code Region --------------------
